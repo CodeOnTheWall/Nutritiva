@@ -3,7 +3,7 @@ import urlFor from "@/lib/urlFor";
 export default function CertificationCard({ profile }) {
   return (
     <div
-      className=" p-10 md:py-10 md:px-0 h-[500px] md:h-[560px] overflow-y-auto
+      className="overflow-y-auto h-[475px] md:h-[555px]
     md:scrollbar scrollbar-track-[#d0e7d5] scrollbar-thumb-[#ef8eb2]
 "
     >

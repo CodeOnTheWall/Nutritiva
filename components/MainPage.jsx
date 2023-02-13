@@ -1,6 +1,6 @@
 "use client";
 
-import BackgroundCircles from "./BackgroundCircles";
+import BackgroundCircles from "./BackgroundRectangles";
 import { motion } from "framer-motion";
 import urlFor from "@/lib/urlFor";
 import { Cursor, useTypewriter } from "react-simple-typewriter";

@@ -42,6 +42,11 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "quote2",
+      title: "Quote2",
+      type: "string",
+    }),
+    defineField({
       name: "cp",
       title: "CP",
       type: "string",

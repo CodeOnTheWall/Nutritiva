@@ -3,6 +3,7 @@ import MainPage from "../components/MainPage";
 import { groq } from "next-sanity";
 import { client } from "../lib/sanity.client";
 import Especialistas from "@/components/Especialistas";
+import Suplementos from "@/components/Suplementos";
 // á, é, í, ó, ú, ü, ñ, ¿, ¡
 
 export const revalidate = 30; // revalidate this page every 60 seconds
@@ -25,8 +26,8 @@ export default async function Home() {
 
   return (
     <div
-      className=" h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
-     z-0 scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
+      className="h-[850px] snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
+      scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482] z-0 "
     >
       {/* Header in Layout */}
       {/* Header */}
@@ -36,19 +37,18 @@ export default async function Home() {
         <MainPage mainPagee={mainPagee} />
       </section>
 
-      {/* Especialistas*/}
-      <section id="especialistas" className="snap-center">
+      {/* Especialistas y Servicios*/}
+      <section id="especialistas" className="snap-start">
         <Especialistas profiles={profiles} />
       </section>
 
-      {/* Servicios */}
-      <section id="servicios" className="snap-center"></section>
-
       {/* Nutraceúticos y Suplementos */}
-      <section id="nut" className="snap-center"></section>
+      <section id="nut" className="snap-start">
+        <Suplementos />
+      </section>
 
       {/* Comentarios */}
-      <section id="nut" className="snap-center"></section>
+      <section id="commentarios" className="snap-start"></section>
 
       {/* Contacto */}
       <section id="contacto" className="snap-start"></section>
