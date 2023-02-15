@@ -1,11 +1,18 @@
 "use client";
 
+// react
 import { useState } from "react";
+
+// custom hook to handle img from sanity
 import urlFor from "@/lib/urlFor";
+
+// framer motion
 import { motion } from "framer-motion";
+
+import BackgroundSmall from "./BackgoundSmall";
 import CertificationCard from "./CertificationCard";
 import ServicioCard from "./ServicioCard";
-import BackgroundSmall from "./BackgoundSmall";
+import Cita from "./Cita";
 
 export default function ProfileCard({ profile }) {
   const [normal, setNormalPage] = useState(true);
@@ -167,59 +174,8 @@ export default function ProfileCard({ profile }) {
 
         {/* Reserva ahora*/}
         {reservaAhoraPage && (
-          <div className="h-[490px] md:h-[575px]">
-            <div className="flex flex-row sm:space-x-10 justify-evenly">
-              <div className="hidden md:flex flex-col justify-center">
-                <motion.img
-                  initial={{
-                    x: -25,
-                    opacity: 0,
-                  }}
-                  transition={{ duration: 1.2 }}
-                  whileInView={{
-                    x: 0,
-                    opacity: 1,
-                  }}
-                  // viewport={{ once: true }}
-                  className="relative w-[200px] h-[275px] rounded-md object-cover object-center"
-                  src={urlFor(profile.mainImage).url()}
-                  alt="Especialista"
-                />
-                <div className=" relative">
-                  <BackgroundSmall />
-                  <motion.div
-                    initial={{
-                      x: 25,
-                      opacity: 0,
-                    }}
-                    transition={{ duration: 1.2 }}
-                    whileInView={{
-                      x: 0,
-                      opacity: 1,
-                    }}
-                    className="h-[200px] w-[200px]"
-                  >
-                    <h2 className="flex h-[200px] justify-center items-center  mx-auto font-bold text-[16px] md:text-[20px] text-[#fb6107]/80">
-                      {profile.quote2}
-                    </h2>
-                  </motion.div>
-                </div>
-              </div>
-
-              <div
-                className=" space-y-4 mt-3 md:mt-0 h-[450px] md:h-[550px] overflow-y-auto
-      md:scrollbar scrollbar-track-[#d0e7d5] scrollbar-thumb-[#ef8eb2]
-   text-center "
-              >
-                {profile.servicios.map((servicio) => (
-                  <ServicioCard
-                    reserva={reservaAhoraPageChangeHandler}
-                    key={servicio._id}
-                    servicio={servicio}
-                  />
-                ))}
-              </div>
-            </div>
+          <div className="flex justify-center h-[490px] md:h-[575px]">
+            <Cita />
           </div>
         )}
 

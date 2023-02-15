@@ -48,7 +48,10 @@ export default function ServicioCard({ servicio, reserva }) {
         >
           <div className=" px-4 text-left"> {servicio.description}</div>
           <div className=" space-x-4">
-            <button className="text-[#f77f00] hover:headerButton">
+            <button
+              onClick={() => reserva(servicio._id)}
+              className="text-[#f77f00] hover:headerButton"
+            >
               Reserva ahora
             </button>
             <button
