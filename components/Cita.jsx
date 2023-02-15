@@ -93,6 +93,16 @@ export default function Cita() {
           </div>
 
           <button
+            onClick={() =>
+              checkout({
+                lineItems: [
+                  {
+                    price: "price_1MbnD7FZtiGruG39KJeebKW8",
+                    quantity: 1,
+                  },
+                ],
+              })
+            }
             type="submit"
             role="link"
             className="bg-[#f28482] py-5 px-10 rounded-md text-white font-bold"
