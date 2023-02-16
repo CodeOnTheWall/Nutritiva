@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { loadStripe } from "@stripe/stripe-js";
+import { checkout } from "./checkout";
 
 // MUI
 import TextField from "@mui/material/TextField";
@@ -8,10 +8,14 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
-export default function Cita() {
-  //   console.log(servicio);
+export default function Cita({ stripePriceID }) {
+  //   console.log(stripePriceID);
   const { register, handleSubmit } = useForm();
-
+  const submitHandler = (formData) => {
+    // window.location.href = `mailto:bralencsundquist@hotmail.com?subject=${formData.subject}
+    // &body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+    console.log(formData);
+  };
   const [value, setValue] = useState(new Date());
 
   return (
@@ -27,8 +31,14 @@ export default function Cita() {
         />
       </LocalizationProvider>
 
-      <div className="overflow-y-auto h-[400px] mt-3">
-        <form className=" flex flex-col space-y-2 w-fit mx-auto">
+      <div
+        className="overflow-y-auto h-[400px] mt-3
+      md:scrollbar scrollbar-track-[#d0e7d5] scrollbar-thumb-[#ef8eb2]"
+      >
+        <form
+          onSubmit={handleSubmit(submitHandler)}
+          className=" flex flex-col space-y-2 w-fit mx-auto"
+        >
           <div className=" w-[300px] flex flex-col">
             <input
               {...register("nombre")}
@@ -93,21 +103,21 @@ export default function Cita() {
           </div>
 
           <button
-            onClick={() =>
-              checkout({
-                lineItems: [
-                  {
-                    price: "price_1MbnD7FZtiGruG39KJeebKW8",
-                    quantity: 1,
-                  },
-                ],
-              })
-            }
+            // onClick={() =>
+            //   checkout({
+            //     lineItems: [
+            //       {
+            //         price: `${stripePriceID}`,
+            //         quantity: 1,
+            //       },
+            //     ],
+            //   })
+            // }
             type="submit"
             role="link"
-            className="bg-[#f28482] py-5 px-10 rounded-md text-white font-bold"
+            className="py-5 px-10 rounded-full text-white bg-[#f28482] font-bold"
           >
-            Submit
+            Pagar Ahora
           </button>
         </form>
       </div>

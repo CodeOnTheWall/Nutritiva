@@ -19,6 +19,9 @@ export default function ProfileCard({ profile }) {
   const [certPage, setCertPage] = useState(false);
   const [serviciosPage, setServiciosPage] = useState(false);
   const [reservaAhoraPage, setReservaAhoraPage] = useState(false);
+  const [stripePriceID, setStripePriceID] = useState();
+
+  console.log(stripePriceID);
 
   const certPageChangeHandler = () => {
     setCertPage(true);
@@ -42,7 +45,7 @@ export default function ProfileCard({ profile }) {
     setNormalPage(false);
     setServiciosPage(false);
     setReservaAhoraPage(true);
-    console.log(id);
+    setStripePriceID(id);
   };
 
   return (
@@ -165,17 +168,17 @@ export default function ProfileCard({ profile }) {
           </div>
         )}
 
+        {/* Reserva ahora*/}
+        {reservaAhoraPage && (
+          <div className="flex justify-center h-[490px] md:h-[575px]">
+            <Cita stripePriceID={stripePriceID} />
+          </div>
+        )}
+
         {/* Certificaciones */}
         {certPage && (
           <div className=" flex justify-center text-center h-[490px] md:h-[575px]">
             <CertificationCard profile={profile} />
-          </div>
-        )}
-
-        {/* Reserva ahora*/}
-        {reservaAhoraPage && (
-          <div className="flex justify-center h-[490px] md:h-[575px]">
-            <Cita />
           </div>
         )}
 

@@ -24,7 +24,7 @@ export default function ServicioCard({ servicio, reserva }) {
           <div>1 Hr {servicio.costo}</div>
           <div className=" space-x-4">
             <button
-              onClick={() => reserva(servicio._id)}
+              onClick={() => reserva(servicio.priceID)}
               className="text-[#f77f00] hover:headerButton"
             >
               Reserva ahora

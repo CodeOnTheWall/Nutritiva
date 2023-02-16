@@ -21,9 +21,9 @@ export default function Suplementos({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[20px] text-[#fb6107] md:text-2xl"
+          className="uppercase tracking-[20px] text-[#fb6107] md:text-[16px]"
         >
-          Nuestras
+          Nuetraceúticos y
         </motion.h3>
 
         <motion.h3
@@ -38,10 +38,10 @@ export default function Suplementos({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className=" ml-3 uppercase tracking-[20px] text-[#fb6107] md:text-2xl"
+          className=" ml-3 uppercase tracking-[20px] text-[#fb6107] md:text-[16px]"
           //
         >
-          Especialistas
+          Suplementos
         </motion.h3>
 
         <motion.div
@@ -58,7 +58,7 @@ export default function Suplementos({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-[720px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-[820px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
         />
         <motion.div
           initial={{
