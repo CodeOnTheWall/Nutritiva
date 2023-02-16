@@ -103,16 +103,16 @@ export default function Cita({ stripePriceID }) {
           </div>
 
           <button
-            // onClick={() =>
-            //   checkout({
-            //     lineItems: [
-            //       {
-            //         price: `${stripePriceID}`,
-            //         quantity: 1,
-            //       },
-            //     ],
-            //   })
-            // }
+            onClick={() =>
+              checkout({
+                lineItems: [
+                  {
+                    price: `${stripePriceID}`,
+                    quantity: 1,
+                  },
+                ],
+              })
+            }
             type="submit"
             role="link"
             className="py-5 px-10 rounded-full text-white bg-[#f28482] font-bold"
