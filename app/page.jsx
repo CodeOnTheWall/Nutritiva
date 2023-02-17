@@ -1,9 +1,10 @@
-import MainPage from "../components/MainPage";
+import MainPage from "../components/MainPage/MainPage";
 
 import { groq } from "next-sanity";
 import { client } from "../lib/sanity.client";
-import Especialistas from "@/components/Especialistas";
-import Suplementos from "@/components/Suplementos";
+import Especialistas from "@/components/Especialistas/Especialistas";
+import Comentarios from "@/components/Comentarios/Comentarios";
+import Productos from "@/components/Productos/Productos";
 // á, é, í, ó, ú, ü, ñ, ¿, ¡
 
 export const revalidate = 30; // revalidate this page every 60 seconds
@@ -18,15 +19,25 @@ const profilesQuery = groq`
 servicios[]->,
 especialidades[]->,
 } | order(_updatedAt desc)`;
+const comentariosQuery = groq`
+*[_type == "comentarios"]{
+...,
+} | order(_createdAt desc)`;
+const productosQuery = groq`
+*[_type == "productosAriix"]{
+...,
+} | order(_createdAt desc)`;
 
 export default async function Home() {
   const mainPage = await client.fetch(mainPageQuery);
   const mainPagee = mainPage[0];
   const profiles = await client.fetch(profilesQuery);
+  const comentarios = await client.fetch(comentariosQuery);
+  const productos = await client.fetch(productosQuery);
 
   return (
     <div
-      className="h-[850px] snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
+      className="h-[700px] md:h-[850px] snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
       scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482] z-0 "
     >
       {/* Header in Layout */}
@@ -44,11 +55,13 @@ export default async function Home() {
 
       {/* Nutraceúticos y Suplementos */}
       <section id="nut" className="snap-start">
-        <Suplementos />
+        <Productos productos={productos} />
       </section>
 
       {/* Comentarios */}
-      <section id="commentarios" className="snap-start"></section>
+      <section id="comentarios" className="snap-start">
+        <Comentarios comentarios={comentarios} />
+      </section>
 
       {/* Contacto */}
       <section id="contacto" className="snap-start"></section>

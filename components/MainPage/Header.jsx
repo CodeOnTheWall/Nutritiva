@@ -134,7 +134,7 @@ export default function Header() {
             transition={{ duration: 1.5 }}
             className="flex flex-row items-center hover:headerButton"
           >
-            <a href="#comentario">Comentarios</a>
+            <a href="#comentarios">Comentarios</a>
           </motion.div>
           <motion.div
             initial={{

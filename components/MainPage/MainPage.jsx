@@ -1,6 +1,6 @@
 "use client";
 
-import BackgroundCircles from "./BackgroundRectangles";
+import BackgroundRectangles from "./BackgroundRectangles";
 import { motion } from "framer-motion";
 import urlFor from "@/lib/urlFor";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
@@ -22,7 +22,7 @@ export default function MainPage({ mainPagee }) {
 
   return (
     <div className=" h-screen flex flex-col space-y-10 justify-center items-center text-center overflow-hidden">
-      <BackgroundCircles />
+      <BackgroundRectangles />
 
       <motion.div
         initial={{

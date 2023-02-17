@@ -21,8 +21,6 @@ export default function ProfileCard({ profile }) {
   const [reservaAhoraPage, setReservaAhoraPage] = useState(false);
   const [stripePriceID, setStripePriceID] = useState();
 
-  console.log(stripePriceID);
-
   const certPageChangeHandler = () => {
     setCertPage(true);
     setNormalPage(false);

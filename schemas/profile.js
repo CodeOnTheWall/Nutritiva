@@ -66,11 +66,5 @@ export default defineType({
       type: "array",
       of: [{ type: "reference", to: { type: "servicio" } }],
     }),
-    defineField({
-      name: "especialidades",
-      title: "Especialidades",
-      type: "array",
-      of: [{ type: "reference", to: { type: "especialidad" } }],
-    }),
   ],
 });

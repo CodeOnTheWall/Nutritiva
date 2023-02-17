@@ -1,14 +1,13 @@
 "use client";
 
-import urlFor from "@/lib/urlFor";
-import ProfileCard from "./ProfileCard";
+import ProductoCard from "./ProductoCard";
 import { motion } from "framer-motion";
 
-export default function Especialistas({ profiles }) {
+export default function Productos({ productos }) {
   return (
     // need relative here with h-screen
     <div className=" h-screen flex flex-col relative mx-auto items-center  md:flex-row max-w-7xl px-8 md:justify-center">
-      <div className="absolute text-center md:top-[25px] md:flex md:flex-row flex-col">
+      <div className="absolute text-center top-0 md:top-[25px] md:flex md:flex-row flex-col">
         <motion.h3
           initial={{
             y: -25,
@@ -21,9 +20,9 @@ export default function Especialistas({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[20px] text-[#fb6107] md:text-2xl"
+          className="uppercase tracking-[10px] md:tracking-[20px] text-[#fb6107]  text-[15px] md:text-[16px]"
         >
-          Nuestras
+          Nuetraceúticos y
         </motion.h3>
 
         <motion.h3
@@ -38,10 +37,10 @@ export default function Especialistas({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className=" ml-3 uppercase tracking-[20px] text-[#fb6107] md:text-2xl"
+          className=" ml-3 uppercase tracking-[10px] md:tracking-[20px] text-[#fb6107]  text-[15px] md:text-[16px]"
           //
         >
-          Especialistas
+          Suplementos
         </motion.h3>
 
         <motion.div
@@ -58,7 +57,7 @@ export default function Especialistas({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-[720px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-[820px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
         />
         <motion.div
           initial={{
@@ -78,13 +77,18 @@ export default function Especialistas({ profiles }) {
         />
       </div>
 
+      <h2 className="absolute text-center top-[50px] md:top-[60px] text-[#fb6107] text-[18px]">
+        Productos Ariix
+      </h2>
       <div
-        className=" w-full flex overflow-x-scroll snap-x snap-mandatory
-        scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
+        className="absolute top-[80px] md:top-[100px] flex flex-col h-[600px] md:h-[650px] overflow-x-scroll snap-x snap-mandatory
+        md:scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
       >
-        {profiles?.map((profile) => (
-          <ProfileCard key={profile._id} profile={profile} />
-        ))}
+        <div className="md:grid gap-4 grid-cols-4 space-y-3 md:space-y-0">
+          {productos?.map((producto) => (
+            <ProductoCard key={producto._id} producto={producto} />
+          ))}
+        </div>
       </div>
     </div>
   );

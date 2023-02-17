@@ -1,14 +1,13 @@
 "use client";
 
-import urlFor from "@/lib/urlFor";
-import ProfileCard from "./ProfileCard";
+import ComentarioCard from "./ComentarioCard";
 import { motion } from "framer-motion";
 
-export default function Suplementos({ profiles }) {
+export default function Comentarios({ comentarios }) {
   return (
     // need relative here with h-screen
     <div className=" h-screen flex flex-col relative mx-auto items-center  md:flex-row max-w-7xl px-8 md:justify-center">
-      <div className="absolute text-center md:top-[25px] md:flex md:flex-row flex-col">
+      <div className="absolute text-center top-[10px] md:top-[25px] flex flex-row">
         <motion.h3
           initial={{
             y: -25,
@@ -21,27 +20,9 @@ export default function Suplementos({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[20px] text-[#fb6107] md:text-[16px]"
+          className="uppercase tracking-[15px] md:tracking-[20px] text-[#fb6107] md:text-2xl"
         >
-          Nuetraceúticos y
-        </motion.h3>
-
-        <motion.h3
-          initial={{
-            y: 25,
-            opacity: 0,
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1.2,
-          }}
-          className=" ml-3 uppercase tracking-[20px] text-[#fb6107] md:text-[16px]"
-          //
-        >
-          Suplementos
+          Comentarios
         </motion.h3>
 
         <motion.div
@@ -58,7 +39,7 @@ export default function Suplementos({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-[820px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-[400px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
         />
         <motion.div
           initial={{
@@ -79,12 +60,14 @@ export default function Suplementos({ profiles }) {
       </div>
 
       <div
-        className=" w-full flex overflow-x-scroll snap-x snap-mandatory
-        scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
+        className="absolute top-[50px] md:top-[100px] flex flex-col h-[600px] md:h-[650px] overflow-x-scroll snap-x snap-mandatory
+        md:scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
       >
-        {profiles?.map((profile) => (
-          <ProfileCard key={profile._id} profile={profile} />
-        ))}
+        <div className="md:grid grid-cols-4 gap-4 md:grid-cols-3 space-y-3 md:space-y-0">
+          {comentarios?.map((comentario) => (
+            <ComentarioCard key={comentario._id} comentario={comentario} />
+          ))}
+        </div>
       </div>
     </div>
   );
