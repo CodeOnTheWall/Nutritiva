@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   return (
-    <header className="text-[#f77f00] sticky top-0 p-5 flex  items-start xl:items-center justify-between max-w-7xl mx-auto z-20  ">
+    <header className="text-[#f77f00] sticky top-0 p-5 flex items-center justify-between max-w-7xl mx-auto">
       <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-4">
         <div className="relative">
           <motion.div
@@ -174,32 +174,30 @@ export default function Header() {
       </div>
 
       {/* Contact */}
-      <div className=" flex relative space-x-1">
-        <div>
-          <motion.div
-            initial={{
-              x: 500,
-              opacity: 0,
-              scale: 0.5,
-            }}
-            animate={{
-              // going to its normal position
-              x: 0,
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{ duration: 1.5 }}
-            className=" text-[#f77f00] cursor-pointer"
-          >
-            <SocialIcon
-              className=" cursor-pointer md:mr-4"
-              network="email"
-              fgColor="grey"
-              bgColor="#f28482"
-              onClick={handleClick}
-            />
-          </motion.div>
-        </div>
+      <div className=" flex relative md:space-x-1">
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            // going to its normal position
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{ duration: 1.5 }}
+          className=" text-[#f77f00] cursor-pointer"
+        >
+          <SocialIcon
+            className=" cursor-pointer md:mr-4 flex"
+            network="email"
+            fgColor="grey"
+            bgColor="#f28482"
+            onClick={handleClick}
+          />
+        </motion.div>
 
         <div className=" relative">
           <motion.div
@@ -225,7 +223,6 @@ export default function Header() {
             </a>
           </motion.div>
 
-          {/* 3 line design */}
           <motion.div
             initial={{
               opacity: 0,

@@ -166,17 +166,27 @@ export default function ProfileCard({ profile }) {
           </div>
         )}
 
+        {/* Certificaciones */}
+        {certPage && (
+          <div
+            className=" flex justify-center text-center h-[490px] md:h-[575px]
+          "
+          >
+            <div className="h-[475px] md:h-[555px] overflow-y-auto md:scrollbar scrollbar-track-[#d0e7d5] scrollbar-thumb-[#ef8eb2] ">
+              {profile.certificaciones.map((certificacion) => (
+                <CertificationCard
+                  key={certificacion._key}
+                  certificacion={certificacion}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Reserva ahora*/}
         {reservaAhoraPage && (
           <div className="flex justify-center h-[490px] md:h-[575px]">
             <Cita stripePriceID={stripePriceID} />
-          </div>
-        )}
-
-        {/* Certificaciones */}
-        {certPage && (
-          <div className=" flex justify-center text-center h-[490px] md:h-[575px]">
-            <CertificationCard profile={profile} />
           </div>
         )}
 

@@ -1,7 +1,7 @@
-import MainPage from "../components/MainPage/MainPage";
-
 import { groq } from "next-sanity";
 import { client } from "../lib/sanity.client";
+
+import MainPage from "../components/MainPage/MainPage";
 import Especialistas from "@/components/Especialistas/Especialistas";
 import Comentarios from "@/components/Comentarios/Comentarios";
 import Productos from "@/components/Productos/Productos";

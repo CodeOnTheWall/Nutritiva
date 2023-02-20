@@ -7,7 +7,7 @@ export default function Productos({ productos }) {
   return (
     // need relative here with h-screen
     <div className=" h-screen flex flex-col relative mx-auto items-center  md:flex-row max-w-7xl px-8 md:justify-center">
-      <div className="absolute text-center top-0 md:top-[25px] md:flex md:flex-row flex-col">
+      <div className="absolute text-center top-[10px] md:top-[25px] md:flex md:flex-row flex-col">
         <motion.h3
           initial={{
             y: -25,
@@ -20,7 +20,7 @@ export default function Productos({ productos }) {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[10px] md:tracking-[20px] text-[#fb6107]  text-[15px] md:text-[16px]"
+          className="uppercase tracking-[10px] md:tracking-[20px] text-[#fb6107]  text-[12px] md:text-[16px]"
         >
           Nuetraceúticos y
         </motion.h3>
@@ -37,7 +37,7 @@ export default function Productos({ productos }) {
           transition={{
             duration: 1.2,
           }}
-          className=" ml-3 uppercase tracking-[10px] md:tracking-[20px] text-[#fb6107]  text-[15px] md:text-[16px]"
+          className=" md:ml-3 uppercase tracking-[10px] md:tracking-[20px] text-[#fb6107]  text-[12px] md:text-[16px]"
           //
         >
           Suplementos
