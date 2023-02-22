@@ -5,14 +5,14 @@ export default function ContactoCard() {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (formData) => {
-    window.location.href = `mailto:nut.cardenas@outlook.es?subject=${formData.subject}
-      &body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+    window.location.href = `mailto:nut.cardenas@outlook.es?subject=${formData.tema}
+      &body=Hola, mi nombre es ${formData.nombre}. ${formData.mensaje} (${formData.email})`;
   };
 
   return (
     <article
-      className="relative rounded-lg w-[400px] h-[600px] md:h-[650px] md:w-[700px]
- snap-center bg-[#f4a261]/40 pt-10 md:p-10 overflow-hidden"
+      className="relative md:bottom-[45px] rounded-lg w-[400px] h-[625px] md:h-[675px] md:w-[700px]
+ snap-center bg-[#f4a261]/40 py-10 md:p-10 overflow-hidden"
     >
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -42,11 +42,18 @@ export default function ContactoCard() {
             className="contactInput"
             type="text"
           />
-          <textarea
+          <input
             {...register("tema")}
             placeholder="Tema"
             className="contactInput"
           />
+          <textarea
+            {...register("mensaje")}
+            placeholder="Mensaje"
+            className="contactInput"
+            type="text"
+          />
+
           <button
             type="submit"
             className="bg-[#d0e7d5] py-5 px-10 rounded-md text-[#ef8eb2] font-bold"
@@ -57,18 +64,18 @@ export default function ContactoCard() {
       </form>
 
       <div className="md:h-[400px] flex flex-col md:space-y-5 mt-5 text-center text-[13px] md:text-[16px]">
-        <div className="flex flex-col items-center md:space-x-5 ">
+        <div className="flex flex-col items-center  ">
           <PhoneIcon className="text-[#f28482] h-7 w-7 animate-pulse" />
           <p>+525579244645</p>
         </div>
 
-        <div className="flex flex-col items-center md:space-x-5 ">
+        <div className="flex flex-col items-center  ">
           <EnvelopeIcon className="text-[#f28482] h-7 w-7 animate-pulse" />
           <p>nut.cardenas@outlook.es/elenasanmed@gmail.com</p>
         </div>
 
         <div
-          className="flex flex-col items-center md:space-x-5 cursor-pointer"
+          className="flex flex-col items-center  cursor-pointer"
           onClick={() =>
             window.open(
               "https://www.google.com/maps?q=Jacarandas+No.+18,+Bellavista,+62170+Cuernavaca,+Mor.",
