@@ -1,13 +1,12 @@
 "use client";
 
-import ComentarioCard from "./ComentarioCard";
 import { motion } from "framer-motion";
+import ContactoCard from "./ContactoCard";
 
-export default function Comentarios({ comentarios }) {
+export default function Contacto() {
   return (
-    // need relative here with h-screen
-    <div className=" h-screen flex flex-col relative mx-auto items-center  md:flex-row max-w-7xl px-8 md:justify-center">
-      <div className="absolute text-center top-[10px] md:top-[25px] flex flex-row">
+    <div className=" h-screen flex justify-center relative px-8 ">
+      <div className="absolute text-center top-[10px] md:top-[25px] md:flex md:flex-row flex-col">
         <motion.h3
           initial={{
             y: -25,
@@ -20,9 +19,9 @@ export default function Comentarios({ comentarios }) {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[15px] md:tracking-[20px] text-[#fb6107] md:text-2xl"
+          className="uppercase tracking-[15px] md:tracking-[20px] text-[#fb6107] text-[13px] md:text-2xl"
         >
-          Comentarios
+          Contacto
         </motion.h3>
 
         <motion.div
@@ -39,7 +38,7 @@ export default function Comentarios({ comentarios }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-[400px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-[300px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
         />
         <motion.div
           initial={{
@@ -59,15 +58,8 @@ export default function Comentarios({ comentarios }) {
         />
       </div>
 
-      <div
-        className="absolute top-[50px] md:top-[100px] flex flex-col h-[550px] md:h-[650px] overflow-x-scroll snap-x snap-mandatory
-        md:scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
-      >
-        <div className="md:grid grid-cols-4 gap-4 md:grid-cols-3 space-y-3 md:space-y-0">
-          {comentarios?.map((comentario) => (
-            <ComentarioCard key={comentario._id} comentario={comentario} />
-          ))}
-        </div>
+      <div className=" w-full flex md:justify-center md:items-center">
+        <ContactoCard />
       </div>
     </div>
   );

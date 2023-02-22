@@ -81,7 +81,7 @@ export default function Productos({ productos }) {
         Productos Ariix
       </h2>
       <div
-        className="absolute top-[80px] md:top-[100px] flex flex-col h-[600px] md:h-[650px] overflow-x-scroll snap-x snap-mandatory
+        className="absolute top-[80px] md:top-[100px] flex flex-col h-[550px] md:h-[650px] overflow-x-scroll snap-x snap-mandatory
         md:scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
       >
         <div className="md:grid gap-4 grid-cols-4 space-y-3 md:space-y-0">

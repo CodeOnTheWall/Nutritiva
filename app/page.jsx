@@ -1,10 +1,13 @@
 import { groq } from "next-sanity";
 import { client } from "../lib/sanity.client";
 
+// put stripe into real not test
+
 import MainPage from "../components/MainPage/MainPage";
 import Especialistas from "@/components/Especialistas/Especialistas";
 import Comentarios from "@/components/Comentarios/Comentarios";
 import Productos from "@/components/Productos/Productos";
+import Contacto from "@/components/Contacto/Contacto";
 // á, é, í, ó, ú, ü, ñ, ¿, ¡
 
 export const revalidate = 30; // revalidate this page every 60 seconds
@@ -64,7 +67,9 @@ export default async function Home() {
       </section>
 
       {/* Contacto */}
-      <section id="contacto" className="snap-start"></section>
+      <section id="contacto" className="snap-start">
+        <Contacto />
+      </section>
     </div>
   );
 }

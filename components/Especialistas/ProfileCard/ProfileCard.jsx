@@ -49,7 +49,7 @@ export default function ProfileCard({ profile }) {
   return (
     <>
       <article
-        className="relative rounded-lg w-[400px] h-[650px] md:h-[700px] md:w-[700px] items-center flex-shrink-0
+        className="relative rounded-lg w-[400px] h-[650px] md:h-[700px] md:w-[700px] flex-shrink-0
     snap-center bg-[#f4a261]/40 pt-14 md:p-10 md:hover:opacity-100 md:opacity-40 md:transition-opacity md:duration-200 overflow-hidden"
       >
         {/* normal */}
@@ -186,7 +186,7 @@ export default function ProfileCard({ profile }) {
         {/* Reserva ahora*/}
         {reservaAhoraPage && (
           <div className="flex justify-center h-[490px] md:h-[575px]">
-            <Cita stripePriceID={stripePriceID} />
+            <Cita stripePriceID={stripePriceID} profile={profile} />
           </div>
         )}
 
