@@ -25,13 +25,13 @@ export default function ServicioCard({ servicio, reserva }) {
           <div className=" space-x-4">
             <button
               onClick={() => reserva(servicio.priceID)}
-              className="text-[#f77f00] hover:headerButton"
+              className="text-[#f28482] hover:headerButton"
             >
               Reserva ahora
             </button>
             <button
               onClick={() => showDescripcionChangeHandler(servicio._id)}
-              className="text-[#f77f00] hover:headerButton"
+              className="text-[#f28482] hover:headerButton"
             >
               Descripcion
             </button>
@@ -50,13 +50,13 @@ export default function ServicioCard({ servicio, reserva }) {
           <div className=" space-x-4">
             <button
               onClick={() => reserva(servicio._id)}
-              className="text-[#f77f00] hover:headerButton"
+              className="text-[#f28482] hover:headerButton"
             >
               Reserva ahora
             </button>
             <button
               onClick={() => normalChangeHandler(servicio._id)}
-              className="text-[#f77f00] hover:headerButton"
+              className="text-[#f28482] hover:headerButton"
             >
               Regresa
             </button>

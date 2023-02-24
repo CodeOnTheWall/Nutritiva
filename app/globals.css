@@ -6,7 +6,7 @@
 
 @layer components {
   .headerButton {
-    @apply bg-[#f28482] rounded-full text-white;
+    @apply bg-[#d0e7d5] rounded-full text-[#f28482];
   }
   .incindioButton {
     @apply px-4 py-2 border border-[#023e8a] rounded-full uppercase text-xs tracking-widest transition-all hover:border-x-neutral-50 text-gray-500 hover:text-[#023e8a/40];

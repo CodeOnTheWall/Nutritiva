@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   return (
-    <header className="text-[#f77f00] sticky top-0 p-5 flex items-center justify-between max-w-7xl mx-auto">
+    <header className="text-[#f28482] sticky top-0 p-5 flex items-center justify-between max-w-7xl mx-auto">
       <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-4">
         <div className="relative">
           <motion.div
@@ -212,12 +212,12 @@ export default function Header() {
               opacity: 1,
               scale: 1,
             }}
-            className=" relative top-2"
+            className=" relative top-2 "
             transition={{ duration: 1.5 }}
           >
             <a
               href="#contacto"
-              className=" uppercase hidden top-5 md:inline-flex text-sm text-[#f77f00] animate-bounce"
+              className=" uppercase hidden top-5 md:inline-flex text-sm text-[#f28482] animate-bounce"
             >
               Contacto
             </a>

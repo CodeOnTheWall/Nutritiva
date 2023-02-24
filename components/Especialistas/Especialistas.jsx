@@ -20,7 +20,7 @@ export default function Especialistas({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[15px] md:tracking-[20px] text-[#fb6107] text-[13px] md:text-2xl"
+          className="uppercase tracking-[15px] md:tracking-[20px] text-[#f28482] text-[13px] md:text-2xl"
         >
           Nuestras
         </motion.h3>
@@ -37,7 +37,7 @@ export default function Especialistas({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className=" ml-3 uppercase tracking-[15px] md:tracking-[20px] text-[#fb6107] text-[13px] md:text-2xl"
+          className=" ml-3 uppercase tracking-[15px] md:tracking-[20px] text-[#f28482] text-[13px] md:text-2xl"
           //
         >
           Especialistas
@@ -57,7 +57,7 @@ export default function Especialistas({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-[720px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-[720px] md:w-[2px] md:h-[32px] bg-[#f28482]"
         />
         <motion.div
           initial={{
@@ -73,7 +73,7 @@ export default function Especialistas({ profiles }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#f28482]"
         />
       </div>
 

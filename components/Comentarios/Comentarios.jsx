@@ -20,7 +20,7 @@ export default function Comentarios({ comentarios }) {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[15px] md:tracking-[20px] text-[#fb6107] md:text-2xl"
+          className="uppercase tracking-[15px] md:tracking-[20px] text-[#f28482] md:text-2xl"
         >
           Comentarios
         </motion.h3>
@@ -39,7 +39,7 @@ export default function Comentarios({ comentarios }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-[400px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-[400px] md:w-[2px] md:h-[32px] bg-[#f28482]"
         />
         <motion.div
           initial={{
@@ -55,7 +55,7 @@ export default function Comentarios({ comentarios }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#f28482]"
         />
       </div>
 

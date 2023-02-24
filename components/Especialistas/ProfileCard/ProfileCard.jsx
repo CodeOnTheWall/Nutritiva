@@ -86,13 +86,13 @@ export default function ProfileCard({ profile }) {
                     opacity: 1,
                   }}
                 >
-                  <h2 className="font-bold text-2xl text-[#fb6107]">
+                  <h2 className="font-bold text-2xl text-[#f28482]">
                     {profile.nombre}
                   </h2>
-                  <p className="text-[#fb6107]">{profile.title}</p>
-                  <p className="text-[#fb6107]">{profile.cp}</p>
+                  <p className="text-[#f28482]">{profile.title}</p>
+                  <p className="text-[#f28482]">{profile.cp}</p>
 
-                  <h2 className="mt-4 font-bold text-[16px] md:text-[20px] text-[#fb6107]/80">
+                  <h2 className="mt-4 font-bold text-[16px] md:text-[20px] text-[#f28482]/80">
                     {profile.quote}
                   </h2>
                 </motion.div>
@@ -142,7 +142,7 @@ export default function ProfileCard({ profile }) {
                     }}
                     className="h-[200px] w-[200px]"
                   >
-                    <h2 className="flex h-[200px] justify-center items-center  mx-auto font-bold text-[16px] md:text-[20px] text-[#fb6107]/80">
+                    <h2 className="flex h-[200px] justify-center items-center  mx-auto font-bold text-[16px] md:text-[20px] text-[#f28482]/80">
                       {profile.quote2}
                     </h2>
                   </motion.div>
@@ -197,7 +197,7 @@ export default function ProfileCard({ profile }) {
               {normal && (
                 <button
                   onClick={serviciosPageChangeHandler}
-                  className=" text-[#f77f00] text-[20px] hover:headerButton"
+                  className=" text-[#f28482] text-[20px] hover:headerButton"
                 >
                   Servicios/Reserva ahora
                 </button>
@@ -205,7 +205,7 @@ export default function ProfileCard({ profile }) {
               {serviciosPage && (
                 <button
                   onClick={normalPageChangeHandler}
-                  className=" text-[#f77f00] text-[20px] hover:headerButton"
+                  className=" text-[#f28482] text-[20px] hover:headerButton"
                 >
                   Regresa
                 </button>
@@ -213,7 +213,7 @@ export default function ProfileCard({ profile }) {
               {certPage && (
                 <button
                   onClick={serviciosPageChangeHandler}
-                  className=" text-[#f77f00] text-[20px] hover:headerButton"
+                  className=" text-[#f28482] text-[20px] hover:headerButton"
                 >
                   Servicios/Reserva ahora
                 </button>
@@ -221,7 +221,7 @@ export default function ProfileCard({ profile }) {
               {reservaAhoraPage && (
                 <button
                   onClick={serviciosPageChangeHandler}
-                  className=" text-[#f77f00] text-[20px] hover:headerButton"
+                  className=" text-[#f28482] text-[20px] hover:headerButton"
                 >
                   Regresa
                 </button>
@@ -267,7 +267,7 @@ export default function ProfileCard({ profile }) {
               {normal && (
                 <button
                   onClick={certPageChangeHandler}
-                  className=" text-[#f77f00] text-[20px] hover:headerButton"
+                  className=" text-[#f28482] text-[20px] hover:headerButton"
                 >
                   Certificaciones
                 </button>
@@ -275,7 +275,7 @@ export default function ProfileCard({ profile }) {
               {serviciosPage && (
                 <button
                   onClick={certPageChangeHandler}
-                  className=" text-[#f77f00] text-[20px] hover:headerButton"
+                  className=" text-[#f28482] text-[20px] hover:headerButton"
                 >
                   Certificaciones
                 </button>
@@ -283,7 +283,7 @@ export default function ProfileCard({ profile }) {
               {certPage && (
                 <button
                   onClick={normalPageChangeHandler}
-                  className=" text-[#f77f00] text-[20px] hover:headerButton"
+                  className=" text-[#f28482] text-[20px] hover:headerButton"
                 >
                   Regresa
                 </button>
@@ -291,7 +291,7 @@ export default function ProfileCard({ profile }) {
               {reservaAhoraPage && (
                 <button
                   onClick={normalPageChangeHandler}
-                  className=" text-[#f77f00] text-[20px] hover:headerButton"
+                  className=" text-[#f28482] text-[20px] hover:headerButton"
                 >
                   Inicio
                 </button>

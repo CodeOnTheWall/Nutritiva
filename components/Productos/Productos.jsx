@@ -20,7 +20,7 @@ export default function Productos({ productos }) {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[10px] md:tracking-[20px] text-[#fb6107]  text-[12px] md:text-[16px]"
+          className="uppercase tracking-[10px] md:tracking-[20px] text-[#f28482]  text-[12px] md:text-[16px]"
         >
           Nuetraceúticos y
         </motion.h3>
@@ -37,7 +37,7 @@ export default function Productos({ productos }) {
           transition={{
             duration: 1.2,
           }}
-          className=" md:ml-3 uppercase tracking-[10px] md:tracking-[20px] text-[#fb6107]  text-[12px] md:text-[16px]"
+          className=" md:ml-3 uppercase tracking-[10px] md:tracking-[20px] text-[#f28482]  text-[12px] md:text-[16px]"
           //
         >
           Suplementos
@@ -57,7 +57,7 @@ export default function Productos({ productos }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-[820px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-[820px] md:w-[2px] md:h-[32px] bg-[#f28482]"
         />
         <motion.div
           initial={{
@@ -73,11 +73,11 @@ export default function Productos({ productos }) {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#f28482]"
         />
       </div>
 
-      <h2 className="absolute text-center top-[50px] md:top-[60px] text-[#fb6107] text-[18px]">
+      <h2 className="absolute text-center top-[50px] md:top-[60px] text-[#f28482] text-[18px]">
         Productos Ariix
       </h2>
       <div

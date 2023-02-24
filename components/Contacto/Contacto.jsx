@@ -19,7 +19,7 @@ export default function Contacto() {
           transition={{
             duration: 1.2,
           }}
-          className="uppercase tracking-[15px] md:tracking-[20px] text-[#fb6107] text-[13px] md:text-2xl"
+          className="uppercase tracking-[15px] md:tracking-[20px] text-[#f28482] text-[13px] md:text-2xl"
         >
           Contacto
         </motion.h3>
@@ -38,7 +38,7 @@ export default function Contacto() {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-[300px] md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-[300px] md:w-[2px] md:h-[32px] bg-[#f28482]"
         />
         <motion.div
           initial={{
@@ -54,7 +54,7 @@ export default function Contacto() {
           transition={{
             duration: 1.2,
           }}
-          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#fbb02d]"
+          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#f28482]"
         />
       </div>
 
