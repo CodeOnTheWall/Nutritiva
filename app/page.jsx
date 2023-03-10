@@ -41,7 +41,7 @@ export default async function Home() {
   return (
     <div
       className="h-[700px] md:h-[850px] snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
-      scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482] z-0 "
+      scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
     >
       {/* Header in Layout */}
       {/* Header */}
