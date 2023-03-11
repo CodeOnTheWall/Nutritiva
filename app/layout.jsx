@@ -1,6 +1,11 @@
 import "./globals.css";
 import Header from "@/components/MainPage/Header";
 
+export const metadata = {
+  title: "Nutritiva",
+  description: "Nutriologia y nutricion ",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

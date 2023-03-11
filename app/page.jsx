@@ -10,6 +10,11 @@ import Productos from "@/components/Productos/Productos";
 import Contacto from "@/components/Contacto/Contacto";
 // á, é, í, ó, ú, ü, ñ, ¿, ¡
 
+// sm: 640px and up
+// md: 768px and up
+// lg: 1024px and up
+// xl: 1280px and up
+// 2xl: 1536px and up
 export const revalidate = 30; // revalidate this page every 60 seconds
 
 const mainPageQuery = groq`

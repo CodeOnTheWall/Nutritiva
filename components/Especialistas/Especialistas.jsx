@@ -1,84 +1,48 @@
-"use client";
 import ProfileCard from "./ProfileCard/ProfileCard";
-import { motion } from "framer-motion";
+
+import MotionDiv from "../Motion/MotionDiv";
+import MotionTitle from "../Motion/MotionTitle";
 
 export default function Especialistas({ profiles }) {
   return (
     <div className=" h-screen flex flex-col relative mx-auto items-center  md:flex-row max-w-7xl px-8 md:justify-center">
       {/* // need relative here with h-screen */}
 
-      <div className="absolute text-center top-[10px] md:top-[25px] md:flex md:flex-row flex-col">
-        <motion.h3
-          initial={{
-            y: -25,
-            opacity: 0,
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1.2,
-          }}
-          className="uppercase tracking-[15px] md:tracking-[20px] text-[#f28482] text-[13px] md:text-2xl"
-        >
-          Nuestras
-        </motion.h3>
-
-        <motion.h3
-          initial={{
-            y: 25,
-            opacity: 0,
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1.2,
-          }}
-          className=" ml-3 uppercase tracking-[15px] md:tracking-[20px] text-[#f28482] text-[13px] md:text-2xl"
-          //
-        >
-          Especialistas
-        </motion.h3>
-
-        <motion.div
-          initial={{
-            opacity: 0,
-            x: 25,
-            y: 25,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            y: 0,
-          }}
-          transition={{
-            duration: 1.2,
-          }}
-          className=" absolute right-[720px] md:w-[2px] md:h-[32px] bg-[#f28482]"
-        />
-        <motion.div
-          initial={{
-            opacity: 0,
-            x: -25,
-            y: -25,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            y: 0,
-          }}
-          transition={{
-            duration: 1.2,
-          }}
-          className=" absolute right-0 md:w-[2px] md:h-[32px] bg-[#f28482]"
-        />
+      <div className="absolute flex top-[10px]   ">
+        <div className="flex flex-col md:flex-row items-center">
+          <MotionDiv
+            x={25}
+            y={25}
+            duration={1.2}
+            useAnimate={false}
+            className="bg-[#f28482] md:w-[2px] md:h-[32px] mr-[15px]"
+          />
+          <MotionTitle
+            y={-25}
+            duration={1.2}
+            className="tracking-[15px] text-[13px]"
+          >
+            Nuestras
+          </MotionTitle>
+          <MotionTitle
+            y={-25}
+            duration={1.2}
+            className="tracking-[15px] text-[13px] ml-3"
+          >
+            Especialistas
+          </MotionTitle>
+          <MotionDiv
+            x={-25}
+            y={-25}
+            duration={1.2}
+            useAnimate={false}
+            className="bg-[#f28482] md:w-[2px] md:h-[32px]"
+          />
+        </div>
       </div>
 
       <div
-        className=" w-full flex overflow-x-scroll snap-x snap-mandatory
+        className="relative md:-top-[90px] w-full flex overflow-x-scroll snap-x snap-mandatory
         scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
       >
         {profiles?.map((profile) => (

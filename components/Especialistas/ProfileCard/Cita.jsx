@@ -4,8 +4,8 @@ export default function Cita({ stripePriceID, profile }) {
   //   console.log(stripePriceID);
 
   return (
-    <div className="flex flex-col justify-center h-[475px] md:h-[555px]">
-      <div className=" md:w-[500px] md:h-[500px] h-[500px]">
+    <div className="flex flex-col justify-center h-[475px]">
+      <div className=" md:w-[500px] md:h-[500px] h-[450px]">
         {profile.nombre === "Amalia Santacruz" && (
           <iframe
             src="https://calendly.com/amalianutritiva"
