@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "./[components]/Header/Header";
+import Footer from "./[components]/Header/Footer";
 
 export const metadata = {
   title: "Nutritiva",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body className=" bg-[#f7ede2] overflow-y-auto scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
