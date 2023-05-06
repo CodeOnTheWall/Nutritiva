@@ -9,9 +9,7 @@ export default function MotionTitle({
   className,
   children,
 }) {
-  const defaultStyles =
-    "uppercase md:tracking-[20px] text-[#f28482] md:text-2xl";
-  const classes = `${defaultStyles} ${className}`;
+  const classes = `uppercase md:tracking-[20px] text-[#f28482] md:text-2xl ${className}`;
 
   return (
     <motion.h3

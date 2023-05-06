@@ -3,18 +3,20 @@
 // react
 import { useState } from "react";
 
-// custom hook to handle img from sanity
-import urlFor from "@/lib/urlFor";
-
-// framer motion
-import { motion } from "framer-motion";
-
-import BackgroundSmall from "./BackgoundSmall";
 import CertificationCard from "./CertificationCard";
 import ServicioCard from "./ServicioCard";
 import Cita from "./Cita";
-import MotionImg from "@/components/Motion/MotionImg";
-import MotionDiv from "@/components/Motion/MotionDiv";
+import MotionImg from "../../Motion/MotionImg";
+import MotionDiv from "../../Motion/MotionDIv";
+
+function BackgroundSmall() {
+  return (
+    <div className=" relative flex justify-center items-center ">
+      <div className=" absolute border border-[#f28482] md:h-[150px] md:w-[250px] mt-52 opacity-80 animate-pulse " />
+      <div className=" absolute border border-[#f28482] md:h-[175px] md:w-[275px] mt-52 opacity-80 animate-pulse" />
+    </div>
+  );
+}
 
 export default function ProfileCard({ profile }) {
   const [normal, setNormalPage] = useState(true);
@@ -51,8 +53,8 @@ export default function ProfileCard({ profile }) {
   return (
     <>
       <article
-        className="relative rounded-lg w-[400px] h-[650px] md:h-[600px] md:w-[700px] flex-shrink-0
-    snap-center bg-[#f4a261]/40 pt-14 md:p-10 md:hover:opacity-100 md:opacity-40 md:transition-opacity md:duration-200 overflow-hidden"
+        className="relative rounded-lg h-[650px] md:h-[600px] flex-shrink-0 w-full lg:w-3/4 2xl:w-2/5
+    bg-[#f4a261]/40 p-4 md:p-8 md:hover:opacity-100 md:opacity-40 md:transition-opacity md:duration-200 overflow-hidden"
       >
         {/* normal */}
         {normal && (
@@ -166,7 +168,7 @@ export default function ProfileCard({ profile }) {
         )}
 
         {/* Buttons Normal */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-5">
           <div className=" md:space-x-6 flex flex-col md:flex-row">
             <div className="relative">
               {normal && (
@@ -202,38 +204,18 @@ export default function ProfileCard({ profile }) {
                 </button>
               )}
 
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: 0,
-                  y: -20,
-                }}
-                animate={{
-                  // going to its normal position
-                  x: 0,
-                  y: 0,
-                  opacity: 1,
-                  scale: 1,
-                  rotate: 25,
-                }}
-                transition={{ duration: 1.5 }}
+              <MotionDiv
+                y={-20}
+                rotate={25}
+                duration={1.5}
+                useAnimate={true}
                 className="absolute bottom-4 -left-[8px] w-[2px] h-[13px] bg-[#f28482]"
               />
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: 0,
-                  y: 20,
-                }}
-                animate={{
-                  // going to its normal position
-                  x: 0,
-                  y: 0,
-                  opacity: 1,
-                  scale: 1,
-                  rotate: -25,
-                }}
-                transition={{ duration: 1.5 }}
+              <MotionDiv
+                y={20}
+                rotate={-25}
+                duration={1.5}
+                useAnimate={true}
                 className="absolute top-4 -left-[8px] w-[2px] h-[13px] bg-[#f28482]"
               />
             </div>
@@ -272,36 +254,18 @@ export default function ProfileCard({ profile }) {
                 </button>
               )}
 
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: 0,
-                  y: -20,
-                }}
-                animate={{
-                  x: 0,
-                  y: 0,
-                  opacity: 1,
-                  scale: 1,
-                  rotate: 25,
-                }}
-                transition={{ duration: 1.5 }}
+              <MotionDiv
+                y={-20}
+                rotate={25}
+                duration={1.5}
+                useAnimate={true}
                 className="absolute bottom-4 -left-[8px] w-[2px] h-[13px] bg-[#f28482]"
               />
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: 0,
-                  y: 20,
-                }}
-                animate={{
-                  x: 0,
-                  y: 0,
-                  opacity: 1,
-                  scale: 1,
-                  rotate: -25,
-                }}
-                transition={{ duration: 1.5 }}
+              <MotionDiv
+                y={20}
+                rotate={-25}
+                duration={1.5}
+                useAnimate={true}
                 className="absolute top-4 -left-[8px] w-[2px] h-[13px] bg-[#f28482]"
               />
             </div>

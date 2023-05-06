@@ -3,30 +3,30 @@
 import { motion } from "framer-motion";
 
 export default function MotionDiv({
-  y,
   x,
-  useAnimate,
+  y,
+  rotate,
+  scale,
   duration,
   delay,
+  useAnimate,
   className,
   children,
 }) {
   const animationProps = useAnimate
-    ? { animate: { x: 0, y: 0, opacity: 1 } }
+    ? { animate: { x: 0, y: 0, opacity: 1, scale: 1, rotate: rotate } }
     : { whileInView: { x: 0, y: 0, opacity: 1 } };
 
   return (
     <motion.div
       initial={{
-        y: y,
         x: x,
+        y: y,
         opacity: 0,
-      }}
-      transition={{
-        duration: duration,
-        delay: delay,
+        scale: scale,
       }}
       {...animationProps}
+      transition={{ duration: duration, delay: delay }}
       className={className}
     >
       {children}

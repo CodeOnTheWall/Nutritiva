@@ -42,9 +42,7 @@ export default function ServicioCard({ servicio, reserva }) {
       {showDescripcion && (
         <div
           key={servicio._id}
-          className={`bg-[#f7ede2] rounded-md w-[300px] h-${
-            normal ? "75px" : "200px"
-          }`}
+          className="bg-[#f7ede2] rounded-md w-[300px] h-auto"
         >
           <div className=" px-4 text-left"> {servicio.description}</div>
           <div className=" space-x-4">

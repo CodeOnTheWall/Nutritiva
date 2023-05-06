@@ -1,13 +1,11 @@
 import { groq } from "next-sanity";
 import { client } from "../lib/sanity.client";
 
-// put stripe into real not test
-
-import MainPage from "../components/MainPage/MainPage";
-import Especialistas from "@/components/Especialistas/Especialistas";
-import Comentarios from "@/components/Comentarios/Comentarios";
-import Productos from "@/components/Productos/Productos";
-import Contacto from "@/components/Contacto/Contacto";
+import MainPage from "./[components]/MainPage/MainPage";
+import Especialistas from "./[components]/Especialistas/Especialistas";
+import Comentarios from "@/app/[components]/Comentarios/Comentarios";
+import Productos from "@/app/[components]/Productos/Productos";
+import Contacto from "@/app/[components]/Contacto/Contacto";
 // á, é, í, ó, ú, ü, ñ, ¿, ¡
 
 // sm: 640px and up
@@ -44,37 +42,31 @@ export default async function Home() {
   const productos = await client.fetch(productosQuery);
 
   return (
-    <div
-      className="h-[700px] md:h-[850px] snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
-      scrollbar scrollbar-track-[#f7cad0] scrollbar-thumb-[#f28482]"
-    >
-      {/* Header in Layout */}
-      {/* Header */}
-
-      {/* Inicio */}
-      <section id="inicio" className="snap-start">
+    <>
+      {/* mainPage */}
+      <section id="mainPage">
         <MainPage mainPagee={mainPagee} />
       </section>
 
       {/* Especialistas y Servicios*/}
-      <section id="especialistas" className="snap-start">
+      <section id="especialistas">
         <Especialistas profiles={profiles} />
       </section>
 
       {/* Nutraceúticos y Suplementos */}
-      <section id="nut" className="snap-start">
+      <section id="suplementos">
         <Productos productos={productos} />
       </section>
 
       {/* Comentarios */}
-      <section id="comentarios" className="snap-start">
+      <section id="comentarios">
         <Comentarios comentarios={comentarios} />
       </section>
 
       {/* Contacto */}
-      <section id="contacto" className="snap-start">
+      <section id="contacto">
         <Contacto />
       </section>
-    </div>
+    </>
   );
 }

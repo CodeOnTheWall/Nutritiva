@@ -1,3 +1,5 @@
+"use client";
+
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
 
@@ -11,7 +13,7 @@ export default function ContactoCard() {
 
   return (
     <article
-      className="relative md:bottom-[45px] rounded-lg w-[400px] h-[625px] md:h-[675px] md:w-[700px]
+      className=" rounded-lg w-[400px] h-[625px] md:h-[675px] md:w-[700px]
  snap-center bg-[#f4a261]/40 py-10 md:p-10 overflow-hidden"
     >
       <form

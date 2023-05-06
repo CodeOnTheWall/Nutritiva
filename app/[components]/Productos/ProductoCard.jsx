@@ -3,7 +3,7 @@ import urlFor from "@/lib/urlFor";
 export default function ProductoCard({ producto }) {
   return (
     <div
-      className="flex flex-col justify-center rounded-lg md:h-[300px] md:w-[200px] items-center
+      className="flex flex-col justify-center rounded-lg md:h-auto md:w-[200px] items-center
       snap-center bg-[#f4a261]/40 py-3 md:pt-5 px-3 md:px-3  overflow-hidden"
     >
       <img
