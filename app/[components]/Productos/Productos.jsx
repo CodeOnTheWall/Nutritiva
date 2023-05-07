@@ -20,7 +20,7 @@ export default function Productos({ productos }) {
           duration={1.2}
           className="uppercase tracking-[10px] md:tracking-[20px] text-[#f28482]  text-[12px] md:text-[16px]"
         >
-          Nuetraceúticos y
+          Nutracéuticos y
         </MotionTitle>
         <MotionTitle
           y={25}
