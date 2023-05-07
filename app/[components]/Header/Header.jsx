@@ -44,7 +44,7 @@ export default function Header() {
       className="text-[#f28482] bg-[#f7ede2] sticky top-0 z-20 flex items-center justify-between
       lg:px-32 px-6 py-5 mx-auto "
     >
-      <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
+      <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
         <AnimatedLink
           children={"Especialistas y Servicios"}
           href={"#especialistas"}
